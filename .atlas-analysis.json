@@ -1,0 +1,119 @@
+{
+  "projectType": "saas",
+  "projectName": "Bad UI",
+  "projectDescription": "A research-backed catalog of UI antipatterns and accessibility failures, with 200+ documented patterns, WCAG-mapped improvement guides, and a community contribution flow.",
+  "theme": "willow",
+  "primaryColor": "#7c7c7c",
+  "lightColor": "#070707",
+  "darkColor": "#c4c4c4",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Overview",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": ["introduction", "getting-started/quickstart"]
+          },
+          {
+            "group": "How It Works",
+            "pages": [
+              "how-it-works/antipattern-library",
+              "how-it-works/categories",
+              "how-it-works/impact-scoring"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Antipatterns",
+        "groups": [
+          {
+            "group": "Category Reference",
+            "pages": [
+              "antipatterns/overview",
+              "antipatterns/forms",
+              "antipatterns/navigation",
+              "antipatterns/accessibility",
+              "antipatterns/mobile",
+              "antipatterns/feedback-states",
+              "antipatterns/layout-spacing",
+              "antipatterns/typography",
+              "antipatterns/dark-patterns",
+              "antipatterns/loading-timeouts",
+              "antipatterns/control-theatre",
+              "antipatterns/notification-spam",
+              "antipatterns/broken-micro-ux"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Improvement Guides",
+        "groups": [
+          {
+            "group": "Accessibility & Standards",
+            "pages": [
+              "guides/overview",
+              "guides/colour-contrast",
+              "guides/keyboard-navigation",
+              "guides/error-handling",
+              "guides/touch-targets",
+              "guides/form-labels",
+              "guides/loading-states"
+            ]
+          },
+          {
+            "group": "Tools & Resources",
+            "pages": [
+              "guides/tools-and-resources"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Contributing",
+        "groups": [
+          {
+            "group": "Community",
+            "pages": [
+              "contributing/overview",
+              "contributing/submit-a-pattern",
+              "contributing/review-process"
+            ]
+          },
+          {
+            "group": "Account",
+            "pages": [
+              "contributing/account-setup",
+              "contributing/profile"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "200+ documented UI antipatterns across 12 structured categories",
+    "WCAG 2.1 & Nielsen heuristics mapped to each pattern",
+    "Production-ready code fixes for every antipattern",
+    "Business impact data quantifying the cost of bad UI",
+    "Searchable and filterable pattern library",
+    "Improvement guides with practical checklists",
+    "Community contribution system with user accounts",
+    "Curated accessibility and UX tools directory"
+  ],
+  "publicApiSurface": [
+    "GET /library — Browsable antipattern archive with filters",
+    "GET /antipatterns/[slug] — Individual antipattern detail page",
+    "GET /category/[slug] — Category-filtered pattern list",
+    "GET /guides — Improvement guides index",
+    "GET /guides/[slug] — Individual improvement guide",
+    "POST /submit — Community pattern submission",
+    "GET /login — User authentication",
+    "GET /register — User registration",
+    "GET /profile — User profile page",
+    "Supabase table: antipatterns (id, slug, title, excerpt, category, impact, wcag_refs, nielsen_refs, code_fix, business_impact, pro_tip, user_story)",
+    "Supabase table: profiles (id, username, display_name, avatar_url, bio, website)"
+  ]
+}
